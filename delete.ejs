@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бришење на Суплемент</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Бришење на Суплемент</h2>
+        <p>Дали сте сигурни дека сакате да го избришете суплементот "<%= supplement.name %>"?</p>
+        <form action="/supplements/delete/<%= supplement._id %>" method="post">
+            <button type="submit" class="btn btn-danger btn-block">Избриши</button>
+        </form>
+    </div>
+</body>
+</html>

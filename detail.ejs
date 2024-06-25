@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали за Суплемент</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center"><%= supplement.name %></h2>
+        <p><%= supplement.description %></p>
+        <p><strong>Цена:</strong> <%= supplement.price %> MKD</p>
+        <img src="<%= supplement.image %>" alt="<%= supplement.name %>" class="img-fluid">
+        <a href="/supplements/edit/<%= supplement._id %>" class="btn btn-secondary mt-3">Уреди</a>
+        <form action="/supplements/delete/<%= supplement._id %>" method="post" style="display:inline;">
+            <button type="submit" class="btn btn-danger mt-3">Избриши</button>
+        </form>
+    </div>
+</body>
+</html>
